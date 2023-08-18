@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, StyleSheet, Text, TextInput, View ,Alert} from 'react-native';
 
 export default AddList=({buttonHandler})=>{
 
@@ -16,7 +16,7 @@ export default AddList=({buttonHandler})=>{
                 onChangeText={changeHandler}
             />
             <Button
-                style={styles.button}
+                style={styles.btn}
                 onPress={()=>buttonHandler(text)}
                 title='ADD Task'
             />
@@ -35,12 +35,13 @@ const styles = StyleSheet.create({
       borderRadius:8,
       backgroundColor:'gray'
     },
-    button:{
-        Color:'red',
-        borderRadius:8,
-        width:70,
-        height:40,
-        marginLeft:60,
-        
-    }
+    btn:{
+        backgroundColor: '#000000',
+        color: '#ffffff',
+        fontSize: 24,
+        fontWeight: 'bold',
+        padding: 10,
+        borderRadius: 5,
+        margin: 10,
+      },
   });
